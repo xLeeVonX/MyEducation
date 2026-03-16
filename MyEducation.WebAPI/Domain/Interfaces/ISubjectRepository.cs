@@ -1,0 +1,13 @@
+﻿namespace MyEducation.WebAPI.Domain.Interfaces;
+
+
+public interface ISubjectRepository
+{
+    Subject GetById(int id);
+
+    Subject Add(Subject subject);
+
+    Subject Update(Subject subject);
+
+    void Delete(int id);
+}

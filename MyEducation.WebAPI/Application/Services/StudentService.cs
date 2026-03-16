@@ -15,6 +15,12 @@
             return _studentRepository.Add(student);
         }
 
+        //  READ
+        public IEnumerable<Student> GetAllStudents()
+        {
+            return _studentRepository.GetAll();
+        }
+
         //  UPDATE
         public Student UpdateStudent(Student student)
         {

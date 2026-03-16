@@ -1,7 +1,3 @@
-using MyEducation.WebAPI.Application.Services;
-using MyEducation.WebAPI.Controllers;
-using MyEducation.WebAPI.Infrastructure.Repositories;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -47,33 +43,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-
-/*
-Program.cs
-appsettings.json
-GlobalUsings.cs
-StudentService.cs
-SubjectService.cs
-TeacherService.cs
-HOKStudentsController.cs
-HOKSubjectsController.cs
-HOKTeachersController.cs
-TECStudentsController.cs
-TECSubjectsController.cs
-TECTeachersController.cs
-Student.cs
-Subject.cs
-Teacher.cs
-IStudentRepository.cs
-ISubjectRepository.cs
-ITeacherRepository.cs
-HOKcontext.cs
-TECcontext.cs
-HOKStudentRepository.cs
-HOKSubjectRepository.cs
-HOKTeacherRepository.cs
-TECStudentRepository.cs
-TECSubjectRepository.cs
-TECTeacherRepository.cs
-*/

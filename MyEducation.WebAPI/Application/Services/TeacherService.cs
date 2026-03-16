@@ -15,6 +15,12 @@
             return _teacherRepository.Add(teacher);
         }
 
+        //  READ
+        public IEnumerable<Teacher> GetAllTeachers()
+        {
+            return _teacherRepository.GetAll();
+        }
+
         //  UPDATE
         public Teacher UpdateTeacher(Teacher teacher)
         {

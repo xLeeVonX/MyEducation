@@ -26,6 +26,11 @@
             return teacher;
         }
 
+        public IEnumerable<Teacher> GetAll()
+        {
+            return _context.Teachers.ToList();
+        }
+
         public Teacher Update(Teacher teacher)
         {
             _context.Teachers.Update(teacher);

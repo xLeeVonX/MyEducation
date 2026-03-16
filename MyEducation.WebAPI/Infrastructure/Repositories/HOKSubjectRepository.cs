@@ -26,6 +26,11 @@
             return subject;
         }
 
+        public IEnumerable<Subject> GetAll()
+        {
+            return _context.Subjects.ToList();
+        }
+
         public Subject Update(Subject subject)
         {
             _context.Subjects.Update(subject);

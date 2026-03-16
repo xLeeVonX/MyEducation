@@ -19,6 +19,11 @@
             return student;
         }
 
+        public IEnumerable<Student> GetAll()
+        {
+            return _context.Students.ToList();
+        }
+
         public Student Add(Student student)
         {
             _context.Students.Add(student);

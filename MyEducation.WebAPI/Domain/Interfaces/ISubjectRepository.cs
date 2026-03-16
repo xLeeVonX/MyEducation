@@ -7,6 +7,8 @@ public interface ISubjectRepository
 
     Subject Add(Subject subject);
 
+    IEnumerable<Subject> GetAll();
+
     Subject Update(Subject subject);
 
     void Delete(int id);

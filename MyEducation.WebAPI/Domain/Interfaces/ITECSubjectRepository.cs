@@ -1,7 +1,7 @@
 ﻿namespace MyEducation.WebAPI.Domain.Interfaces;
 
 
-public interface ISubjectRepository
+public interface ITECSubjectRepository
 {
     Subject GetById(int id);
 

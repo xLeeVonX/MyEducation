@@ -1,6 +1,6 @@
 ﻿namespace MyEducation.WebAPI.Infrastructure.Repositories
 {
-    public class TECStudentRepository : IStudentRepository
+    public class TECStudentRepository : ITECStudentRepository
     {
         private readonly TECcontext _context;
 
@@ -19,16 +19,16 @@
             return student;
         }
 
-        public IEnumerable<Student> GetAll()
-        {
-            return _context.Students.ToList();
-        }
-
         public Student Add(Student student)
         {
             _context.Students.Add(student);
             _context.SaveChanges();
             return student;
+        }
+
+        public IEnumerable<Student> GetAll()
+        {
+            return _context.Students.ToList();
         }
 
         public Student Update(Student student)

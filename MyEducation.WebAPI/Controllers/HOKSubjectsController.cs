@@ -1,14 +1,12 @@
-﻿using MyEducation.WebAPI.Application.Services;
-
-namespace MyEducation.WebAPI.Controllers
+﻿namespace MyEducation.WebAPI.Controllers
 {
     [ApiController]
     [Route("hok/subjects")]
     public class HOKSubjectsController : ControllerBase
     {
-        private readonly SubjectService _subjectService;
+        private readonly HOKSubjectService _subjectService;
 
-        public HOKSubjectsController(SubjectService subjectService)
+        public HOKSubjectsController(HOKSubjectService subjectService)
         {
             _subjectService = subjectService;
         }
@@ -18,6 +16,13 @@ namespace MyEducation.WebAPI.Controllers
         {
             var created = _subjectService.CreateSubject(subject);
             return Ok(created);
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var subjects = _subjectService.GetAllSubjects();
+            return Ok(subjects);
         }
 
         [HttpPut]

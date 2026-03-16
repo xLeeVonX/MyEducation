@@ -1,6 +1,6 @@
 ﻿namespace MyEducation.WebAPI.Infrastructure.Repositories
 {
-    public class HOKStudentRepository : IStudentRepository
+    public class HOKStudentRepository : IHOKStudentRepository
     {
         private readonly HOKcontext _context;
 

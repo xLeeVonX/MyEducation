@@ -1,7 +1,7 @@
 ﻿namespace MyEducation.WebAPI.Domain.Interfaces;
 
 
-public interface ITeacherRepository
+public interface IHOKTeacherRepository
 {
     Teacher GetById(int id);
 

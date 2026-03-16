@@ -1,7 +1,7 @@
 ﻿namespace MyEducation.WebAPI.Domain.Interfaces;
 
 
-public interface IStudentRepository
+public interface IHOKStudentRepository
 {
     Student GetById(int id);
 

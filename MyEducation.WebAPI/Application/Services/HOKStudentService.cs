@@ -1,12 +1,12 @@
 ﻿namespace MyEducation.WebAPI.Application.Services
 {
-    public class StudentService
+    public class HOKStudentService
     {
-        private readonly IStudentRepository _studentRepository;
+        private readonly IHOKStudentRepository _studentRepository;
 
-        public StudentService(IStudentRepository studentRepository)
+        public HOKStudentService(IHOKStudentRepository studentFactory)
         {
-            _studentRepository = studentRepository;
+            _studentRepository = studentFactory;
         }
 
         //  CREATE

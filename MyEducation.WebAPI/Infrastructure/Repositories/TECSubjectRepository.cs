@@ -1,6 +1,6 @@
 ﻿namespace MyEducation.WebAPI.Infrastructure.Repositories
 {
-    public class TECSubjectRepository : ISubjectRepository
+    public class TECSubjectRepository : ITECSubjectRepository
     {
         private readonly TECcontext _context;
 

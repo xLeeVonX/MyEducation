@@ -1,10 +1,10 @@
 ﻿namespace MyEducation.WebAPI.Application.Services
 {
-    public class SubjectService
+    public class TECSubjectService
     {
-        private readonly ISubjectRepository _subjectRepository;
+        private readonly ITECSubjectRepository _subjectRepository;
 
-        public SubjectService(ISubjectRepository subjectRepository)
+        public TECSubjectService(ITECSubjectRepository subjectRepository)
         {
             _subjectRepository = subjectRepository;
         }

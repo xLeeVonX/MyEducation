@@ -1,14 +1,12 @@
-﻿using MyEducation.WebAPI.Application.Services;
-
-namespace MyEducation.WebAPI.Controllers
+﻿namespace MyEducation.WebAPI.Controllers
 {
     [ApiController]
     [Route("tec/subjects")]
     public class TECSubjectsController : ControllerBase
     {
-        private readonly SubjectService _subjectService;
+        private readonly TECSubjectService _subjectService;
 
-        public TECSubjectsController(SubjectService subjectService)
+        public TECSubjectsController(TECSubjectService subjectService)
         {
             _subjectService = subjectService;
         }
@@ -18,6 +16,13 @@ namespace MyEducation.WebAPI.Controllers
         {
             var created = _subjectService.CreateSubject(subject);
             return Ok(created);
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var subjects = _subjectService.GetAllSubjects();
+            return Ok(subjects);
         }
 
         [HttpPut]

@@ -1,10 +1,10 @@
 ﻿namespace MyEducation.WebAPI.Application.Services
 {
-    public class TeacherService
+    public class TECTeacherService
     {
-        private readonly ITeacherRepository _teacherRepository;
+        private readonly ITECTeacherRepository _teacherRepository;
 
-        public TeacherService(ITeacherRepository teacherRepository)
+        public TECTeacherService(ITECTeacherRepository teacherRepository)
         {
             _teacherRepository = teacherRepository;
         }

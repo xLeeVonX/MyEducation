@@ -1,14 +1,12 @@
-﻿using MyEducation.WebAPI.Application.Services;
-
-namespace MyEducation.WebAPI.Controllers
+﻿namespace MyEducation.WebAPI.Controllers
 {
     [ApiController]
     [Route("tec/students")]
     public class TECStudentsController : ControllerBase
     {
-        private readonly StudentService _studentService;
+        private readonly TECStudentService _studentService;
 
-        public TECStudentsController(StudentService studentService)
+        public TECStudentsController(TECStudentService studentService)
         {
             _studentService = studentService;
         }
@@ -18,6 +16,13 @@ namespace MyEducation.WebAPI.Controllers
         {
             var created = _studentService.CreateStudent(student);
             return Ok(created);
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var students = _studentService.GetAllStudents();
+            return Ok(students);
         }
 
         [HttpPut]
